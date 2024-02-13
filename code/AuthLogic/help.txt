@@ -1,0 +1,26 @@
+This code sets up a simple authentication system using FastAPI with Flask-like syntax. Here's what each part does:
+
+Imports: Import necessary modules and classes from FastAPI and other libraries.
+Constants: Define constants like SECRET_KEY for JWT token encoding/decoding and ACCESS_TOKEN_EXPIRE_MINUTES for token expiration time.
+Fake User Database: Create a fake user database for demonstration purposes. In a real-world scenario, user data would be fetched from a database.
+Password Hashing: Initialize a password hashing context using bcrypt.
+OAuth2PasswordBearer: Set up OAuth2PasswordBearer for token handling.
+User and Token Models: Define Pydantic models for User and Token.
+Authentication Functions:
+authenticate_user: Authenticate a user based on email and password.
+create_access_token: Create a JWT token for authentication.
+get_current_user: Decode and verify a JWT token to get the current user.
+Token Endpoint (/token):
+Handles user authentication using OAuth2PasswordRequestForm.
+If authentication is successful, returns a JWT token in the response.
+Protected Endpoint (/protected):
+Demonstrates a protected route that requires authentication.
+Uses the get_current_user dependency to verify the JWT token.
+Returns a message along with the user's email if authentication is successful.
+Run the App: If the script is executed directly, it starts the FastAPI app using Uvicorn server.
+In summary, this code provides a basic authentication mechanism using JWT tokens in FastAPI. Users can authenticate using their email and password, and upon successful authentication, they receive a JWT token. This token can then be used to access protected routes, such as /protected, where the user's identity is verified.
+
+
+
+
+

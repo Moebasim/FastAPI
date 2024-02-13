@@ -1,0 +1,13 @@
+In the context of security and authentication, a "key" and a "token" serve different purposes:
+
+Key:
+A key is typically a piece of information used in cryptographic algorithms to encrypt, decrypt, or authenticate data.
+Keys can be public (known to everyone) or private (known only to the owner), or a combination of both in asymmetric cryptography.
+In authentication, keys are often used to prove the identity of a party in a secure manner. For example, in asymmetric cryptography, a private key is used to sign data, and the corresponding public key is used to verify the signature.
+Keys are usually long, randomly generated strings of characters.
+Token:
+A token is a piece of data that represents the right to access a resource or perform an action.
+Tokens are often used in authentication and authorization systems. When a user logs in, they may receive a token that they can then present with each subsequent request to prove their identity without needing to repeatedly enter their username and password.
+Tokens can come in various forms, such as JSON Web Tokens (JWT), OAuth tokens, or session tokens.
+Tokens are typically short-lived and may have expiration times to enhance security.
+In summary, while both keys and tokens play roles in security and authentication, keys are used in cryptographic operations, while tokens are used to represent authentication or authorization credentials.
